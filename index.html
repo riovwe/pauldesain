@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+    <script>
+        function validateLogin() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            if (username == "paul" && password == "1234") {
+                window.location.href = "beranda.html"; // Ganti dengan URL halaman tujuan Anda
+            } else {
+                alert("Kata sandi salah!");
+            }
+        }
+    </script>
+</head>
+<body style="font-family: Arial, sans-serif; background-color: #f4f4f9; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0;">
+    <div style="background-color: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); width: 300px;">
+        <h2 style="text-align: center;">Login</h2>
+        <form onsubmit="event.preventDefault(); validateLogin();">
+            <label for="username" style="display: block; width: 100%; margin-bottom: 10px;">Nama Pengguna:</label>
+            <input type="text" id="username" required style="display: block; width: 100%; margin-bottom: 10px;">
+            <label for="password" style="display: block; width: 100%; margin-bottom: 10px;">Kata Sandi:</label>
+            <input type="password" id="password" required style="display: block; width: 100%; margin-bottom: 10px;">
+            <button type="submit" style="display: block; width: 100%; background-color: #0056b3; color: white; padding: 10px; border: none; border-radius: 5px; cursor: pointer;">Login</button>
+        </form>
+    </div>
+</body>
+</html>
